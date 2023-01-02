@@ -7,7 +7,7 @@ const Header = () => {
       <header id="header" className="fixed-top">
         <div className="container d-flex align-items-center justify-content-between">
           <h1 className="logo">
-            <a href="index.html">
+            <a href="/">
               <img src="/logo1.png" /> Al Amana
             </a>
           </h1>
@@ -16,7 +16,7 @@ const Header = () => {
           <nav id="navbar" className="navbar">
             <ul>
               <li>
-                <a className="nav-link scrollto active" href="#hero">
+                <a className="nav-link scrollto active" href="/">
                   Home
                 </a>
               </li>
