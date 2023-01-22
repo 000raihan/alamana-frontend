@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -14,10 +15,10 @@ const Footer = () => {
                 </span>{" "}
                 <h3>Al Amana Stone Crusher</h3>
                 <p>
-                  A108 Adam Street <br />
-                  New York, NY 535022
+             
+                Dupagul, Airport, Dhopagul, Sylhet, 
                   <br />
-                  United States <br />
+                  Bangladesh
                   <br />
                   <strong>Phone:</strong>
                   01755-673963
@@ -55,7 +56,11 @@ const Footer = () => {
                 <ul>
                   <li>
                     <i className="bx bx-chevron-right" />{" "}
-                    <a href="#">Web Design</a>
+                    <Link to="/stone">পাথর</Link>
+                  </li>
+                  <li>
+                    <i className="bx bx-chevron-right" />{" "}
+                    <Link to="/sand">বালি</Link>
                   </li>
                   {/* <li>
                     <i className="bx bx-chevron-right" />{" "}

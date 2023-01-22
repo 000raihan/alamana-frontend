@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useState, useRef} from "react";
+import emailjs from "@emailjs/browser";
 import Header from "../../components/Layout/Header/Header";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -7,10 +8,25 @@ import Footer from "../../components/Layout/Footer/Footer";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    // alert("called");
+    // e.preventDefault(); // prevents the page from reloading when you hit “Send”
+
+    // emailjs.sendForm("service_c29i7gb", "template_zt0qd6c", form.current, "FRitjK_ycplIHxoAZ").then(
+    //   (result) => {
+    //     console.log("result : ", result);
+    //   },
+    //   (error) => {
+    //     // show the user an error
+    //     console.log("error : ", error);
+    //   }
+    // );
+  };
   return (
     <div>
       <Header />
-      <Carousel infiniteLoop={true} interval={3000}>
+      <Carousel autoPlay={true} infiniteLoop={true} interval={3000}>
         <div>
           <img src="images/slide_image_1.jpeg" />
         </div>
@@ -47,7 +63,7 @@ const Home = () => {
           <div className="address">
             <i className="bi bi-geo-alt" />
             <h4>Location:</h4>
-            <p>A108 Adam Street, New York, NY 535022</p>
+            <p>Dupagul, Airport, Dhopagul, Sylhet, Bangladesh</p>
           </div>
           <div className="email">
             <i className="bi bi-envelope" />
@@ -57,12 +73,13 @@ const Home = () => {
           <div className="phone">
             <i className="bi bi-phone" />
             <h4>Call:</h4>
-            <p>01755-673963</p>
+            <p>+8801755-673963</p>
           </div>
         </div>
       </div>
       <div className="col-lg-8 mt-5 mt-lg-0">
         <form
+        ref={form} onSubmit={sendEmail}
           action="forms/contact.php"
           method="post"
           role="form"
@@ -72,7 +89,7 @@ const Home = () => {
             <div className="col-md-6 form-group">
               <input
                 type="text"
-                name="name"
+                name="from_name"
                 className="form-control"
                 id="name"
                 placeholder="Your Name"
@@ -83,7 +100,7 @@ const Home = () => {
               <input
                 type="email"
                 className="form-control"
-                name="email"
+                name="from_email"
                 id="email"
                 placeholder="Your Email"
                 required=""
@@ -93,9 +110,9 @@ const Home = () => {
               <input
                 type="text"
                 className="form-control"
-                name="subject"
-                id="subject"
-                placeholder="Subject"
+                name="from_mobile"
+                id="mobile"
+                placeholder="Mobile"
                 required=""
               />
             </div>

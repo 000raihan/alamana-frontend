@@ -8,7 +8,7 @@ const MainCategory = () => {
 <section id="team" className="team section-bg">
   <div className="container aos-init aos-animate" data-aos="fade-up">
     <div className="section-title">
-      <h2>Categories</h2>
+      <h2>Products</h2>
       {/* <p>
         Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
         aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos

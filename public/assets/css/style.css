@@ -169,6 +169,10 @@ h6 {
 /**
 * Desktop Navigation 
 */
+
+.fixed-top{
+  position: sticky !important;
+}
 .navbar {
   padding: 0;
 }
