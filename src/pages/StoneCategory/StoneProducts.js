@@ -21,7 +21,7 @@ const StoneProducts = () => {
   };
 
   useEffect(() => {
-    const url = `${base_url}/api/get_products/${location.state.id}`;
+    const url = `/api/get_products/${location.state.id}`;
 
     const fetchData = async () => {
       try {

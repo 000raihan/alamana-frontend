@@ -16,7 +16,7 @@ const SandCategory = () => {
   };
 
   useEffect(() => {
-    const url = `${base_url}/api/get_products/50`;
+    const url = `/api/get_products/50`;
 
     const fetchData = async () => {
       try {

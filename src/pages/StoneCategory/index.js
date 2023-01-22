@@ -13,7 +13,7 @@ const StoneCategory = () => {
   };
 
   useEffect(() => {
-    const url = `${base_url}/api/get_all_category`;
+    const url = `/api/get_all_category`;
 
     const fetchData = async () => {
       try {
