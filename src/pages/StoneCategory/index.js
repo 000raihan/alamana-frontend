@@ -50,10 +50,11 @@ const StoneCategory = () => {
                       >
                         <Link to="/stone_products" state={{ id: cat.id }}>
                           <div className="member">
-                            <div className="member-img">
+                            <div className="member-img" style={{minWidth:"300px"}}>
                               <img
-                               
-                                src="images/stone2.jpg"
+                                // src={`${base_url}/images/${product.image}`}
+                                style={{height: "300px", width:'100%', objectFit:'cover'}}
+                                src={cat.category_image ? `${base_url}/category_images/${cat.category_image}` : "images/stone2.jpg"} 
                                 className="img-fluid"
                                 alt=""
                               />
