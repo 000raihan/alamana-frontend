@@ -54,7 +54,7 @@ const StoneCategory = () => {
                               <img
                                 // src={`${base_url}/images/${product.image}`}
                                 style={{height: "300px", width:'100%', objectFit:'cover'}}
-                                src={cat.category_image ? `${base_url}/category_images/${cat.category_image}` : "images/stone2.jpg"} 
+                                src={cat.category_image ? `/category_images/${cat.category_image}` : "images/stone2.jpg"} 
                                 className="img-fluid"
                                 alt=""
                               />

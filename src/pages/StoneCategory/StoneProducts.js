@@ -59,7 +59,7 @@ const StoneProducts = () => {
                           <div className="member-img">
                             <img
                             style={{height: "300px", width:'100%', objectFit:'cover'}}
-                              src={`${base_url}/images/${product.image}`}
+                              src={`/images/${product.image}`}
                               //   src="images/stone2.jpg"
                                 className="img-fluid"
                               alt=""
